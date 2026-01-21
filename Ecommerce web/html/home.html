@@ -18,7 +18,7 @@
 
         <div class="nav">
             <ul>
-                <li class="nav-link"><a href="">Home</a></li>
+                <li class="nav-link"><a href=""><abbr title="Home page">Home</abbr></a></li>
                 <li class="nav-link"><a href="">Shop</a></li>
                 <li class="nav-link"><a href="">About us</a></li>
                 <li class="nav-link"><a href="">Services</a></li>
@@ -83,7 +83,7 @@
                 <template id="services-template">
                     <div class="wrapper-class">
                         <div class="image-wrap"><img class="service-img" src="" alt="icon svg"></div>
-                        <h2 id="service-text">Fast and Free Shipping</h2>
+                        <h2 class="service-text">Fast and Free Shipping</h2>
                         <p class="main-text">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
                             Aliquam
                             vulputate.</p>
@@ -159,27 +159,70 @@
         </div>
     </div>
 
-
     <div class="testimonials-section">
         <h1 class="test-head">Testimonials</h1>
-        <div class="testimonials-wrapper">
-            <div class="testimonial-card">
-                <blockquote>
-                    <p class="test-info">
-                        <q>
-                            Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
-                            malesuada.
-                            Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
-                            Pellentesque
-                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer
-                            convallis volutpat dui quis scelerisque.
-                        </q>
-                    </p>
-                </blockquote>
+        <div class="testimonial-frame">
+            <div class="left" id="left-arrow"><img src="/Ecommerce web/img/right-arrow.png" alt=""></div>
+            <div class="testimonials-wrapper"></div>
+            <template class="testimonial-temp">
+                <div class="testimonial-card">
+                    <blockquote>
+                        <p class="test-info">
+                            Donec facilisis quam ut purus rutrum lobortis. Donec vitae
+                            odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+                            vulputate velit imperdiet dolor tempor tristique. Pellentesque
+                            habitant morbi tristique senectus et netus et malesuada fames ac
+                            turpis egestas. Integer convallis volutpat dui quis
+                            scelerisque.
+                        </p>
+                    </blockquote>
+
+                    <div class="person-pic">
+                        <img src="" alt="person-pic" class="person-1-img">
+                    </div>
+                    <h3 class="person-title"></h3>
+                    <p class="role">CEO, Co-Founder, XYZ Inc.</p>
+                </div>
+            </template>
+            <div class="right" id="right-arrow"><img src="/Ecommerce web/img/right-arrow.png" alt=""></div>
+        </div>
+    </div>
+
+    <div id="blog-section">
+        <h1 class="blog-head">Recent Blog</h1>
+        <div class="blogs-wrapper">
+            <div class="blog-1">
+                <div class="blog-image"><img src="/Ecommerce web/img/post-1.jpg" alt="post-img"></div>
+                <h3 class="blog-info">First Time Home Owner Ideas</h3>
+                <p class="blog-by"><span>by <a href="#">Kristin Watson</a> on <a href="#">Dec 19,2021</a></span></p>
+            </div>
+            <div class="blog-2">
+                <div class="blog-image"><img src="/Ecommerce web/img/post-2.jpg" alt="post-img"></div>
+                <h3 class="blog-info">How To Keep Your Furniture Clean</h3>
+                <p class="blog-by"><span>by <a href="#">Robert Fox</a> on <a href="#">Dec 15,2021</a></span></p>
+            </div>
+            <div class="blog-3">
+                <div class="blog-image"><img src="/Ecommerce web/img/post-3.jpg" alt="post-img"></div>
+                <h3 class="blog-info">Small Space Furniture Apartment Ideas</h3>
+                <p class="blog-by"><span>by <a href="#">Kristin Watson</a>  on <a href="#">Dec 19,2021</a></span></p>
+            </div>
+        </div>
+        <strong class="view-post"><a href="#">View All Posts</a></strong>
+    </div>
+
+    <div id="footer-section">
+        <div id="outer-footer">
+            <div class="newsletter">
+                <div class="envelope-side">
+                    <span><img src="/Ecommerce web/img/envelope-outline.svg" alt="envelope-img"> Subscirbe to Newsletter</span>
+                </div>
+                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="Enter your Email">
+                <div class="send-image"><img src="" alt=""></div>
             </div>
         </div>
     </div>
-    <script src="/Ecommerce web/js/script.js"></script>
+    <script src="/Ecommerce web/js/script.js" type="module"></script>
 </body>
 
 </html>
