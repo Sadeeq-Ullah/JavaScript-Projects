@@ -39,41 +39,28 @@ for (let testemdata = 0; testemdata < testimonial.length; testemdata++) {
     testwrapper.appendChild(clone);
 }
 
+frame.addEventListener('click', (event) => {
+    cardSlider(event);
+});
 let cardCount = 0;
 
 let cardSlider = (event) => {
     if (event.target.closest("#left-arrow")) {
+        console.log("left");
         cardCount--;
         card.forEach(prev_card => {
-            let getPrevCard = () => {
-                prev_card.style.transform = `translateX(${cardCount * 100}%)`;
-                cardCount = 0;
-            }
-            console.log(getPrevCard())
-        })
+            prev_card.style.transform = `translateX(${cardCount * 100}%)`;
+        });
+        if (cardCount < 0) cardCount = cardLen - 1;
+
     } else if (event.target.closest("#right-arrow")) {
         cardCount++;
         card.forEach(next_card => {
-            let getNextCard = () => {
-                next_card.style.transform = `translateX(${cardCount * -100}%)`;
-            }
-            console.log(getNextCard())
-
-            let getLastCard = () => {
-                if (cardCount >= cardLen) {
-                    next_card.style.transform = `translateX(0%)`;
-                    cardCount = 0;
-                }
-            }
-            console.log(getLastCard())
-        })
-    } else {
-        console.log("Nothing");
-    }
+            next_card.style.transform = `translateX(${cardCount * -100}%)`;
+        });
+        if (cardCount >= cardLen) cardCount = 0;
+    } 
 }
 
-frame.addEventListener('click', (event) => {
-    cardSlider(event);
-});
 
 
