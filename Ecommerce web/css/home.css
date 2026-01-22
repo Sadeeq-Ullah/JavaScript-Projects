@@ -724,3 +724,22 @@ blockquote .test-info::after {
 .blog-3:hover .blog-image {
     opacity: 0.5;
 }
+
+#footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+#outer-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.newsletter {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--min-gap);
+}

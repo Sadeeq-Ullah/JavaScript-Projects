@@ -7,10 +7,6 @@ const icons_serv = document.querySelector("#services-icons");
 const template_serv = document.querySelector("#services-template");
 const templtest = document.querySelector(".testimonial-temp");
 const testwrapper = document.querySelector(".testimonials-wrapper");
-const frame = document.querySelector(".testimonial-frame");
-const wrapper = frame.querySelector(".testimonials-wrapper");
-const card = wrapper.querySelectorAll(".testimonial-card");
-const cardLen = card.length;
 
 
 products.forEach((product) => {
@@ -39,28 +35,37 @@ for (let testemdata = 0; testemdata < testimonial.length; testemdata++) {
     testwrapper.appendChild(clone);
 }
 
-frame.addEventListener('click', (event) => {
-    cardSlider(event);
-});
-let cardCount = 0;
+const frame = document.querySelector(".testimonial-frame");
+const wrapper = frame.querySelector(".testimonials-wrapper");
+const card = wrapper.querySelectorAll(".testimonial-card");
+const cardLen = card.length; 
 
+
+let cardCount = 0;
 let cardSlider = (event) => {
-    if (event.target.closest("#left-arrow")) {
-        console.log("left");
+    if (event.target.closest("#left-arrow")) { 
         cardCount--;
+        console.log(cardCount)
         card.forEach(prev_card => {
             prev_card.style.transform = `translateX(${cardCount * 100}%)`;
         });
-        if (cardCount < 0) cardCount = cardLen - 1;
+        if (cardCount < 0) {
+            cardCount = cardLen - 1;
+        }
 
     } else if (event.target.closest("#right-arrow")) {
         cardCount++;
+        console.log(cardCount)
         card.forEach(next_card => {
             next_card.style.transform = `translateX(${cardCount * -100}%)`;
         });
-        if (cardCount >= cardLen) cardCount = 0;
-    } 
+        if (cardCount == cardLen-1) {
+            cardCount = 0;
+        }
+    }
 }
 
-
+frame.addEventListener('click', (event) => {
+    cardSlider(event);
+});
 
