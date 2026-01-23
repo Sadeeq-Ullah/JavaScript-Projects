@@ -37,8 +37,7 @@ for (let testemdata = 0; testemdata < testimonial.length; testemdata++) {
 
 // Clone the first card to the end for smooth infinite scrolling
 const firstCardClone = testwrapper.firstElementChild.cloneNode(true);
-testwrapper.appendChild(firstCardClone);
-
+testwrapper.appendChild(firstCardClone); 
 const frame = document.querySelector(".testimonial-frame");
 const wrapper = frame.querySelector(".testimonials-wrapper");
 const card = wrapper.querySelectorAll(".testimonial-card");
@@ -52,11 +51,11 @@ let cardSlider = (event) => {
         cardCount--;
         card.forEach(prev_card => {
             prev_card.style.transition = "transform 0.3s ease-in-out";
-            prev_card.style.transform = `translateX(${cardCount * -100}%)`;
+            prev_card.style.transform = `translateX(${cardCount * 100}%)`;
         });
         
         if (cardCount < 0) {
-            cardCount = cardLen - 1; // Jump to the last real card (skipping clone)
+            cardCount = cardLen - 2; // Jump to the last real card (skipping clone)
         }
 
     } else if (event.target.closest("#right-arrow")) {
