@@ -6,6 +6,8 @@ const slider = document.querySelector(".testimonials-wrapper");
 
 if (slider) {
     function sliderHandle() {
+
+        
         const cards = slider.querySelectorAll(".testimonial-card");
         const leftBtn = document.querySelector("#left-arrow");
         const rightBtn = document.querySelector("#right-arrow");
