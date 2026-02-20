@@ -50,3 +50,5 @@ let storage = (ele, key) => {
         ele.remove();
     });
 }
+
+ 
