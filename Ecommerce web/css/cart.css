@@ -310,7 +310,7 @@
 @media (min-width: 200px) and (max-width: 550px) {
     .cart-section {
         margin-left: 0;
-        width: 110%;
+        width: 100%;
         padding: 4rem 1.5rem;
     }
 
@@ -353,7 +353,7 @@
     }
 
     .details {
-        width: 120%;
+        width: 110%;
         padding: 3rem 2rem;
     }
 

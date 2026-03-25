@@ -336,11 +336,11 @@ input:focus {
 /* === Mobile — max 550px === */
 @media (min-width: 200px) and (max-width: 550px) {
     .main-content {
-        padding: 0 2rem 16rem 2rem;
+        padding: 0 1rem 16rem 1rem;
     }
 
     .form-section .billing-form {
-        width: 110%;
+        width: 88%;
     }
 
     .coupon-code {

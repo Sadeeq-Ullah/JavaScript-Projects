@@ -1,70 +1,130 @@
-# 🚀 JavaScript & Web Development Projects
+# JavaScript Fundamentals — Project Portfolio
 
-Welcome to my JavaScript Projects repository! 🎉 This collection features a variety of interactive web applications built with HTML, CSS, and JavaScript. Each project demonstrates fundamental concepts, creative implementations, and practical utilities—from calculators to games. Explore the demos, dive into the code, and get inspired to build your own! 💻✨
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Netlify](https://img.shields.io/badge/Deployed-Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://www.netlify.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sadeeq%20Khilji-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sadeeq-khilji/)
+[![GitHub](https://img.shields.io/badge/GitHub-Sadeeq--Ullah-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Sadeeq-Ullah?tab=repositories)
 
-![JavaScript (ES6)](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+---
 
-## 🛠️ Projects
+## Overview
 
-Here are the projects currently featured in this repository.
+This repository documents my JavaScript fundamentals journey through hands-on projects. Each project was built from scratch without frameworks — intentionally, to develop a strong understanding of core JS mechanics: event handling, state management, DOM interaction, and data persistence. Every project is fully deployed and functional.
 
-| 🌟 Project | 📝 Description | 💻 Key Technologies | 🔗 Live Demo |
-| :--- | :--- | :--- | :--- |
-| **💱 Currency Converter** | A real-time currency tool supporting 160+ currencies. Features dynamic flags and live rates via API. | JS (Async/Await), Fetch API | [Launch App 🚀](https://currencyconvert122od4.netlify.app/) |
-| **✂️ Rock Paper Scissors** | The classic game vs. computer! Includes score tracking, random logic, and dynamic DOM updates. | JS (Event Handling), CSS Animations | [Play Game 🎮](https://scissorgame.netlify.app/) |
-| **🧠 Quiz App** | A multiple-choice quiz platform with real-time scoring and immediate feedback. | JS (ES6 Modules), Array Methods | [Start Quiz 📝](https://quizsession.netlify.app/) |
-| **🧮 Calculator** | A sleek, neumorphic calculator for basic arithmetic with input validation. | JS (Logic), CSS Grid/Flexbox | [Calculate 🔢](https://calculator210o.netlify.app/) |
-| **📝 To-Do List** | A task management app with local storage persistence for adding, viewing, and deleting tasks. | JS (localStorage), CSS Flexbox | [Manage Tasks 📋](https://todolist21884.netlify.app/) |
-| **🛒 Ecommerce Web** | A multi-page furniture store with dynamic product rendering, reusable components, and data-driven UI. | JS (ES6 Modules), Fetch API, HTML Templates | [View Store 🏪](https://sofastorewebsite321.netlify.app/) |
+---
 
-## 🏗️ Repository Structure & Standards
+## Projects
 
-To ensure scalability and maintainability, this repository follows a strict structure.
+### 🧮 Calculator
+> Arithmetic logic built entirely in vanilla JS with full input validation and edge case handling.
 
-### 📁 Directory Layout
-```text
+- Handles operator chaining, decimal inputs, and invalid sequences without breaking
+- Layout built with CSS Grid — no table hacks
+- Focused on clean conditional logic and state tracking between operations
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open-brightgreen?style=flat-square)](https://calculator210o.netlify.app/)
+
+---
+
+### 🧠 Quiz App
+> A modular quiz platform using ES6 imports/exports — closest in structure to production-level JS organization.
+
+- Questions and answers managed as structured data arrays, fully decoupled from UI logic
+- Real-time score tracking with immediate per-answer feedback
+- First project in this repo to use ES6 Modules — demonstrates understanding of file-based code separation
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open-brightgreen?style=flat-square)](https://quizsession.netlify.app/)
+
+---
+
+### ✂️ Rock Paper Scissors
+> Classic game vs. computer — built to practice randomization, conditional branching, and live DOM updates.
+
+- Computer move generated via `Math.random()` with result evaluated through a decision matrix
+- Score persists across rounds within the session
+- CSS animations tied to win/loss outcomes for visual feedback
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open-brightgreen?style=flat-square)](https://scissorgame.netlify.app/)
+
+---
+
+### 📝 To-Do List
+> Task management app with full CRUD operations and localStorage persistence.
+
+- Tasks survive page refresh via `localStorage` — read, written, and parsed on every state change
+- Delete and completion toggle implemented without any third-party library
+- Demonstrates understanding of JSON serialization and browser storage APIs
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open-brightgreen?style=flat-square)](https://todolist21884.netlify.app/)
+
+---
+
+## JS Concepts Covered Across Projects
+
+| Concept | Where Applied |
+| :--- | :--- |
+| DOM manipulation | All projects |
+| Event listeners & delegation | Calculator, To-Do List, Rock Paper Scissors |
+| State management (vanilla) | Calculator, Quiz App |
+| ES6 Modules (import/export) | Quiz App |
+| localStorage & JSON | To-Do List |
+| Randomization & conditionals | Rock Paper Scissors |
+| CSS Grid & Flexbox | Calculator, To-Do List |
+| Input validation | Calculator |
+
+---
+
+## Repository Structure
+
+```
 /
-├── 📂 Project-Name/
-│   ├── 📄 index.html      # Main structure
-│   ├── 🎨 style.css       # Styling and layout
-│   ├── ⚙️ app.js          # Logic and functionality
-│   └── 📝 README.md       # Project-specific documentation
-└── 📘 README.md           # Main repository documentation
+├── Calculator/
+│   ├── index.html
+│   ├── style.css
+│   ├── app.js
+│   └── README.md
+├── Quiz app/
+│   ├── index.html
+│   ├── style.css
+│   ├── app.js
+│   └── README.md
+├── StoneScissorsPaper/
+│   ├── index.html
+│   ├── style.css
+│   ├── app.js
+│   └── README.md
+├── To do list/
+│   ├── index.html
+│   ├── style.css
+│   ├── app.js
+│   └── README.md
+└── README.md
 ```
 
-## 🚀 Getting Started
+---
 
-To keep the showcase growing, follow this format for new additions:
-- Create a subfolder for the project. 📁
-- Include `index.html`, styles, scripts, and any assets. 🖼️
-- Add a `README.md` in the project folder with details. 📝
-- Update this main README by adding a new row to the table above. 🔄
+## Running Locally
 
-1. **Clone the Repository**
 ```bash
-   git clone <your-repo-url>
+# Clone the repository
+git clone https://github.com/Sadeeq-Ullah/javascript-projects.git
+
+# Navigate to any project
+cd "Quiz app"
+
+# Open in browser
+# Option 1 — VS Code Live Server (recommended)
+# Option 2 — Python local server
+python -m http.server
 ```
 
-2. **Navigate to the Project**
-```bash
-   cd "Currency converter"  # Example
-```
+> **Important:** The Quiz App uses ES6 Modules and must be served through a local server. Opening `index.html` directly via the file system will throw CORS errors due to browser security restrictions on module imports.
 
-3. **Launch**
+---
 
-   Open the `index.html` file in your preferred web browser.
+## Connect
 
-   > ⚠️ **Note:** Projects using ES6 Modules (e.g., Quiz App, Ecommerce Web) require a local server to avoid CORS errors. Use the **Live Server** extension in VS Code, or run `python -m http.server` in the project folder.
-
-## 🛠️ Technologies Overview
-
-- **HTML**: For structuring web pages and interfaces. 🏗️
-- **CSS**: For styling, responsiveness, and animations. 🎨
-- **JavaScript**: For interactivity, logic, and API handling. ⚡
-- **APIs**: Integrated where needed (e.g., currency rates). 🔗
-
-## 🤝 Contributing
-
-Feel free to fork, suggest improvements, or add your own projects! Ensure new additions follow the project structure and include live demos where possible. Let's build something amazing together! 👥
-
-Enjoy exploring and coding! 🎊
+- **GitHub:** [github.com/Sadeeq-Ullah](https://github.com/Sadeeq-Ullah?tab=repositories)
+- **LinkedIn:** [linkedin.com/in/sadeeq-khilji](https://www.linkedin.com/in/sadeeq-khilji/)
